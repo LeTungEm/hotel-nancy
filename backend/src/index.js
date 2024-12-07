@@ -26,7 +26,7 @@ if (!fs.existsSync(uploadDir)) {
 // Enable CORS for the frontend URL (allowing credentials) before other routes
 app.use(cors({
     origin: 'http://localhost:5174',  // Frontend URL
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
     credentials: true,  // Enable cookies and credentials
 }));
 

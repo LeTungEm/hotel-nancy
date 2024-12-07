@@ -147,7 +147,7 @@ CREATE TABLE IF NOT EXISTS `rooms` (
   `availability_status` tinyint(1) DEFAULT '1',
   PRIMARY KEY (`room_id`),
   KEY `hotel_id` (`hotel_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci; 
 
 --
 -- Dumping data for table `rooms`
