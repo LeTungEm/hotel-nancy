@@ -52,6 +52,15 @@ app.get('/test-db', (req, res) => {
         res.status(200).json({ message: 'Database connected successfully', solution: results[0].solution });
     });
 });
+// Test database connection
+app.get('/test', (req, res) => {
+    connection.query('SELECT 1 + 1 AS solution', (err, results) => {
+        if (err) {
+            return res.status(500).json({ message: 'Database connection error', error: err });
+        }
+        res.status(200).json({ message: 'Database connected successfully', solution: results[0].solution });
+    });
+});
 
 // Setup multer for image uploading (saving locally before uploading to Cloudinary)
 const storage = multer.memoryStorage();  // Store the file in memory instead of locally
